@@ -44,15 +44,12 @@ p{
   color:rgb(62, 101, 173);
   padding:3% 10% 0.5%;
 }
-.attendance{
-  width:100%;
-  margin-bottom: 2%10
-}
+
 .timetable{
   width:100%;
 }
-.marks{
-  width:100%;
+.courses{
+  width:80%;
 }
 #bt{
   background-color: rgb(62, 101, 173);
