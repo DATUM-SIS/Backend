@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Student's Information System</title>
+  <link rel="stylesheet" href="{% static 'student.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navb">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="{% static 'logo.jpeg' %}" width="45" height="45" class="d-inline-block align-top" alt="Logo">
+        <a class="navbar-brand" id='DATUM_HEADING' href="{% url 'home_url' %}">DATUM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+
+            </li>
+          </ul>
+          <a class="nav-link" href="{% url 'profile_url' %}">Profile </a>
+          <a class="nav-link" href="{% url 'logout_url' %}">Logout </a>
+        </div>
+    </nav>
+  </div>
+
+  <div class="Intro">
+    <p>
+      {% if name == none %}
+      Your Profile is incomplete, Please fill your personal details.
+      {% else %}
+      Hello {{ name }}
+      {% endif %}
+    </p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+
+          <div class="card-body ">
+            <img class="attendance" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpNS2pO42haggq8Td-d7OAFEQ4nw8qPfzh9EuPfgGP2gVXl8J7VDjFYbpaCRBueq187Yk&usqp=CAU" alt="attendace">
+            <button id="bt" class="btn btn-lg btn-block btn-outline-light" type="button">ATTENDANCE</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+
+          <div class="card-body">
+            <img class="marks" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE6YrvMdpc67qOKtqh0DczBq-aab2fbh9znsobn0iq6U3vBAaoYmRbNEnscL12PZxuc1Y&usqp=CAU" alt="marks">
+            <button id="bt" class="btn btn-lg btn-block btn-outline-light" type="button">MARKS</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+
+          <div class="card-body">
+            <img class="timetable" src="https://thumbs.dreamstime.com/b/timetable-icon-vector-sign-symbol-isolated-white-backgrou-background-your-web-mobile-app-design-logo-concept-133737829.jpg" alt="timetable" >
+            <button id="bt"class="btn btn-lg btn-block btn-outline-light" type="button">TIMETABLE</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
