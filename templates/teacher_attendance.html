@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="{% static 'teacher_attendance.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navb">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="{% static 'logo.jpeg' %}" width="45" height="45" class="d-inline-block align-top" alt="Logo">
+      <a class="navbar-brand" id='DATUM_HEADING' href="{% url 'home_url' %}">DATUM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+
+          </li>
+        </ul>
+        <a class="nav-link" href="{% url 'profile_url' %}">Profile </a>
+        <a class="nav-link" href="{% url 'logout_url' %}">Logout </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="Intro">
+    <p>
+      Attendance
+    </p>
+  </div>
+
+  <div class='container' style='margin-top: 2%; '>
+    <div class='row align-items-center justify-content-around'>
+      <div class="col-lg-4 col-xs-12" id='box'>
+        <div style="width:100%;overflow-y:auto; max-height:400px;">
+          <table class="table table-bordered table-striped table-hover">
+            <thead class>
+              <tr>
+                <th id='heading_text' scope="col">
+                  <h3>Date</h3>
+                </th>
+                <th id='heading_text' scope="col">
+                  <h3>Status<h3>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for date in dates %}
+              <tr>
+                <td id='normal_text' scope="row">
+                  <h5>{{ date }}</h5>
+                </td>
+                <td id='normal_text'>
+                  <h5>Marked</h5>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xs-12" id='percentage_number'>
+        <span style='align-items:center; font-size: 2em; display: block; text-align: center;'>Days Marked</span>
+        <h1 id='percentage_color_4'>{{ count }}</h1>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid">
+              <div class="form-group">
+                <!-- Submit button -->
+                <a style="text-decoration: none;" href="{% url 'mark_attendance_url' %}"><button id='bt' name="submit" type="button" class="btn btn-outline-primary"><h5>Mark New Attendance</h5></button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
