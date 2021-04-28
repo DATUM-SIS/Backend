@@ -1,0 +1,66 @@
+/* NavBar */
+#DATUM_HEADING{
+    color: rgb(62, 101, 173);
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-left: 10px;
+    margin-right: 0.5rem;
+}
+
+.nav-link{
+    text-align: left;
+    padding: 3px 8px;
+    font-weight: 600;
+    margin: 1px 5px;
+    font-size:1.35em;
+    color: black;
+    border-radius: 0.7em;
+    transition: .5s;
+}
+
+.nav-link:hover{
+    color: white;
+    background-color: rgb(62, 101, 173);
+}
+
+/* Student_courses */
+
+#heading_text{
+    padding-top: 16px;
+    padding-bottom: 3px;
+}
+
+#normal_text{
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+#box{
+    margin: 2% 8% 2% 10%;
+    padding: 3% 2% 2% 2%;
+    border-radius: 1em;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.9), 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+#heading{
+    border-radius: 1em;
+    color: rgb(62, 101, 173);
+    background-color: #e5e5e5;
+    padding: 3% 7%;
+    margin: 7px;
+}
+
+#links{
+    text-align: left;
+    padding: 3px 8px;
+    font-weight: 600;
+    color: black;
+    border-radius: 0.7em;
+    transition: .5s;
+    border: 2px solid rgb(62, 101, 173);
+}
+
+#links:hover{
+    color: white;
+    background-color: rgb(62, 101, 173);
+}

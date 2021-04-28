@@ -1,0 +1,126 @@
+#DATUM_HEADING{
+    color: rgb(62, 101, 173);
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-left: 10px;
+    margin-right: 0.5rem;
+}
+
+.nav-link{
+    text-align: left;
+    padding: 3px 8px;
+    font-weight: 600;
+    margin: 1px 5px;
+    font-size:1.35em;
+    color: black;
+    border-radius: 0.7em;
+    transition: .5s;
+}
+
+.nav-link:hover{
+    color: white;
+    background-color: rgb(62, 101, 173);
+}
+p{
+  font-weight: bold;
+  font-size: 40px;
+}
+.Intro{
+  margin:20px 150px;
+  border-radius:1em;
+  text-align: center;
+  background-color: #F0F2FD;
+  color:rgb(62, 101, 173);
+  padding:3% 10% 0.5%;
+}
+#heading{
+    border-radius: 1em;
+    color: rgb(62, 101, 173);
+    background-color: #e5e5e5;
+    padding: 3% 7%;
+    margin: 7px 0px;
+}
+
+/* left column */
+#box{
+    padding: 3% 2% 0.5% 2%;
+    text-align: center;
+    margin: 2% 8%;
+    border-radius: 1em;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.9), 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+#heading_text{
+    padding-top: 16px;
+    padding-bottom: 3px;
+}
+
+#normal_text{
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+
+/* right column */
+#percentage_number{
+    padding: 2% 2% 1% 2%;
+    border-radius: 1em;
+    margin: 2% 8%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.9), 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+#percentage_color_1{
+    color: #28a745;
+    display: block;
+    text-align: center;
+    font-size: 9em;
+}
+
+#percentage_color_2{
+    color: #ffc107;
+    display: block;
+    text-align: center;
+    font-size: 9em;
+}
+
+#percentage_color_3{
+    color: #ff8507;
+    display: block;
+    text-align: center;
+    font-size: 9em;
+}
+
+#percentage_color_4{
+    color: rgb(247, 83, 43);
+    display: block;
+    text-align: center;
+    font-size: 9em;
+}
+.new{
+  text-align: center;
+  padding:30px;
+}
+#bt{
+  background-color: rgb(62, 101, 173);
+}
+#bt:hover{
+  background-color: #4d4dff;
+}
+.container-fluid{
+  text-align: center;
+  margin-top: 40px;
+}
+.control-label{
+  font-weight: bold;
+  font-size: 30px;
+}
+.control-label{
+  margin:20px;
+}
+input {
+  border: 2px solid #5C5C5C;
+  border-radius: 5px;
+  background-color: #E4E6F4;
+  padding: 8px 15px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 200px;
+}
