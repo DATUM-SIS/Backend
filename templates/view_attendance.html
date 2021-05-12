@@ -1,10 +1,15 @@
 {% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
+  <meta charset="utf-8">
   <title>ATTENDANCE</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="{% static 'student_attendance.css' %}">
+  <link rel="stylesheet" href="{% static 'view_attendance.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,8 +32,9 @@
     </div>
   </nav>
   <div class='user-profile' style="margin-top:2%; margin-bottom:2%;">
-    <h1 class="gradient-text">ATTENDANCE</h1>
+    <h1 class="gradient-text">ATTENDANCE &nbspON&nbsp {{ date }}</h1>
   </div>
+
 
   <div class='container' style='margin: 0%; '>
     <div class='row' style='margin: 0%;'>
@@ -38,7 +44,7 @@
             <thead>
               <tr>
                 <th style="width:4%;position:sticky;top:0;border: 1px solid black;">
-                  <h4 id='heading_text'>DATE</h4>
+                  <h4 id='heading_text'>SID</h4>
                 </th>
                 <th style="width:3%;position:sticky;top:0;border: 1px solid black;">
                   <h4 id='heading_text'>STATUS<h4>
@@ -46,10 +52,10 @@
               </tr>
             </thead>
             <tbody>
-              {% for date,status in attendance %}
+              {% for student,status in attendance %}
               <tr>
                 <td>
-                  <h5 id='normal_text'>{{ date }}</h5>
+                  <h5 id='normal_text'>{{ student }}</h5>
                 </td>
                 <td>
                   <h5 id='normal_text'>{{ status }}</h5>
@@ -60,31 +66,23 @@
           </table>
         </div>
       </div>
-        <div class="col" style="margin:0%;">
-            <div id='info_1'>
-              <span id="abc_1">
-                {% if percentage == None %}
-                NO ATTENDANCE MARKED!
-                {% else %}
-                YOUR PERCENTAGE
-                {% endif %}
-              </span>
-              {% if percentage > 80 %}
-              <h1 id='percentage_color_1'>{{ percentage }}%</h1>
-              {% elif percentage > 60 %}
-              <h1 id='percentage_color_2'>{{ percentage }}%</h1>
-              {% elif percentage > 40 %}
-              <h1 id='percentage_color_3'>{{ percentage }}%</h1>
-              {% elif percentage < 41 %}
-              <h1 id='percentage_color_4'>{{ percentage }}%</h1>
-              {% endif %}
+      <div class="col" style="margin:0%;">
+        <div id='info_1'>
+          <div class="row" style="justify-content:center;">
+            <div class="col-lg-5">
+              <span id="abc_2">PRESENT</span>
+              <h1 id='percentage_color_4'>{{ present }}</h1>
             </div>
+            <div style="border-left:3px solid grey;height:200px;margin-left: 7%;margin-right: 5%"></div>
+            <div class="col-lg-5">
+              <span id="abc_2">ABSENT</span>
+              <h1 id='percentage_color_4'>{{ absent }}</h1>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 
 </html>
