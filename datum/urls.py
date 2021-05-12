@@ -31,4 +31,7 @@ urlpatterns = [
     path('teacher_attendance/', views.teacher_attendance_view, name = 'teacher_attendance_url'),
     path('teacher_marks/', views.teacher_marks_view, name = 'teacher_marks_url'),
     path('mark_attendance/', views.mark_attendance_view, name = 'mark_attendance_url'),
+    path('mark_marks/', views.mark_marks_view, name = 'mark_marks_url'),
+    path('timetable/', views.timetable_view, name = 'timetable_url'),
+    path('view_attendance/', views.view_attendance_view, name = 'view_attendance_url'),
 ]

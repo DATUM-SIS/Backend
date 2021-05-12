@@ -1,43 +1,56 @@
-/* NavBar */
 #DATUM_HEADING{
-  color: rgb(62, 101, 173);
-  font-weight: 700;
-  font-size: 2.5em;
-  padding-left: 10px;
-  margin-right: 0.5rem;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 2.5em;
+    padding-left: 10px;
+    margin-right: 0.5rem;
+    font-family: sans-serif;
 }
 
 .nav-link{
   text-align: left;
-  padding: 3px 8px;
-  font-weight: 600;
-  margin: 1px 5px;
-  font-size:1.35em;
+  padding: 3px 10px;
+  margin: 1px 2px;
+  font-size:1.1em;
+  font-weight: 500;
   color: black;
+  font-family: inherit;
+  font-style: normal;
   border-radius: 0.7em;
   transition: .5s;
 }
 
 .nav-link:hover{
-  color: white;
-  background-color: rgb(62, 101, 173);
+  color: black;
+  background-color: #e069a0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Edit Profile */
+.user-profile{
+    padding-top: 1%;
+    padding-bottom: 2.5%;
+    border-radius: 1em;
+    margin: 7px;
+    justify-content: center;
+    display: flex;
+}
+.gradient-text {
+  font-family: Druk,Impact,sans-serif;
+  color: black;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 6em;
+  text-align: center;
+  margin-bottom: -5;
+  margin-top: 10;
+}
 
 #edit_form{
-  margin: 2% 20%;
-  padding: 1% 0 0 3%;
-  border-radius: 1em;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.9), 0 1px 2px 0 rgba(0,0,0,.2);
-}
-
-#heading{
-  border-radius: 1em;
-  color: rgb(62, 101, 173);
-  background-color: #e5e5e5;
-  padding: 3% 7%;
-  margin: 7px;
+  margin: 0% 35% 5% 35%;
+  padding: 1% 0 0 0%;
+  border-radius: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #FormInput{
@@ -47,37 +60,42 @@
 }
 
 .Submit_button{
-  text-align: left;
-  padding: 3px 8px;
-  font-weight: 600;
-  margin: 1px 5px;
-  font-size:1.35em;
-  color: black;
-  border-radius: 0.7em;
-  transition: .5s;
-  border: 2px solid rgb(62, 101, 173);
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: left;
+    padding: 5px 11px;
+    margin: 1px 5px;
+    border-radius: 0.7em;
+    transition: .5s;
+    border: 2px solid white;
+    color: white;
+    background-color: black;
 }
 
 .Submit_button:hover{
-  color: white;
-  background-color: rgb(62, 101, 173);
+  background-color: #e069a0;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-color: black;
 }
 
-/* Toggle Button */
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 30px;
+  width: 81px;
+  height: 25px;
 }
 
-.switch input { 
+/* Hide default HTML checkbox */
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
+/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -85,7 +103,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e92929;
+  background-color: rgb(240, 48, 48);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -93,9 +111,9 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
-  left: 5px;
+  height: 18px;
+  width: 18px;
+  left: 4px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -103,11 +121,11 @@
 }
 
 input:checked + .slider {
-  background-color: rgb(39, 211, 39);
+  background-color: rgb(56, 235, 32);
 }
 
 input:focus + .slider {
-  background-color: rgb(39, 211, 39);
+  box-shadow: 0 0 1px  rgb(56, 235, 32);
 }
 
 input:checked + .slider:before {
